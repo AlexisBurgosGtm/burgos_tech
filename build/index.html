@@ -107,12 +107,12 @@
     </div>
 
     <!-- PWA Install Alert -->
-    <div class="toast pwa-install-alert shadow bg-white" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000" data-bs-autohide="true">
+    <div id="cardInstall" class="hand shadow toast pwa-install-alert shadow bg-white" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000" data-bs-autohide="true">
       <div class="toast-body">
         <div class="content d-flex align-items-center mb-2"><img src="img/icons/icon-72x72.png" alt="">
-          <h6 class="mb-0">Add to Home Screen</h6>
+          <h6 class="mb-0 hand" id="btnInstalar">Instálame como aplicación</h6>
           <button class="btn-close ms-auto" type="button" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div><span class="mb-0 d-block">Add Suha on your mobile home screen. Click the<strong class="mx-1">Add to Home Screen</strong>button &amp; enjoy it like a regular app.</span>
+        </div><span class="mb-0 d-block">Click en esta tarjeta para instalar</span>
       </div>
     </div>
 
@@ -168,7 +168,7 @@
                   <div class="card-body">
                     <a class="text-danger" href="#">
                       <i class="fa fa-wrench"></i>
-                      <span>Revisa mi pc</span>
+                      <span>Quiero que arregles mi Pc/Impresora</span>
                     </a>
                   </div>
                 </div>
@@ -177,16 +177,16 @@
               <div class="col-4">
                 <div class="card catagory-card">
                   <div class="card-body"><a href="#">
-                    <i class="fa fa-wifi"></i>
-                    <span>Quiero instalar una red</span></a></div>
+                    <i class="fa fa-comments"></i>
+                    <span>Quiero una consulta técnica gratis!!</span></a></div>
                 </div>
               </div>
               <!-- Single Catagory Card -->
               <div class="col-4">
                 <div class="card catagory-card">
                   <div class="card-body"><a class="text-warning" href="#">
-                    <i class="fa fa-camera"></i>
-                    <span>Quiero instalar cámaras</span></a></div>
+                    <i class="fa fa-user"></i>
+                    <span>Mi Cuenta</span></a></div>
                 </div>
               </div>
               
@@ -216,7 +216,7 @@
                   <!-- Thumbnail --><a class="product-thumbnail d-block" href="single-product.html"><img class="mb-2" src="img/product/5.png" alt=""></a>
                   <!-- Product Title --><a class="product-title d-block" href="single-product.html">Wooden Sofa</a>
                   <!-- Product Price -->
-                  <p class="sale-price">$74</p>
+                  <p class="sale-price">Q 74.00</p>
                   <!-- Rating -->
                   <!-- Add to Cart --><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
                 </div>
@@ -231,7 +231,7 @@
                   <!-- Thumbnail --><a class="product-thumbnail d-block" href="single-product.html"><img class="mb-2" src="img/product/5.png" alt=""></a>
                   <!-- Product Title --><a class="product-title d-block" href="single-product.html">Wooden Sofa</a>
                   <!-- Product Price -->
-                  <p class="sale-price">$74</p>
+                  <p class="sale-price">Q 74.00</p>
                   <!-- Rating -->
                   <!-- Add to Cart --><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
                 </div>
@@ -246,7 +246,7 @@
                   <!-- Thumbnail --><a class="product-thumbnail d-block" href="single-product.html"><img class="mb-2" src="img/product/5.png" alt=""></a>
                   <!-- Product Title --><a class="product-title d-block" href="single-product.html">Wooden Sofa</a>
                   <!-- Product Price -->
-                  <p class="sale-price">$74</p>
+                  <p class="sale-price">Q 74.00</p>
                   <!-- Rating -->
                   <!-- Add to Cart --><a class="btn btn-success btn-sm" href="#"><i class="lni lni-plus"></i></a>
                 </div>
@@ -272,9 +272,9 @@
       <div class="container h-100 px-0">
         <div class="suha-footer-nav h-100">
           <ul class="h-100 d-flex align-items-center justify-content-between ps-0">
-            <li class="active"><a href="home.html"><i class="lni lni-home"></i>Inicio</a></li>
+            <li class="active"><a href="index.html"><i class="lni lni-home"></i>Inicio</a></li>
             <li><a href="https://api.whatsapp.com/send?phone=50257255092&text=Hola%20Burgos%20Tech%20%F0%9F%91%8B%F0%9F%91%8B%20...%20quiero%20contactarme%20contigo%20para%20%20%3D%3D%3E%3E%20"><i class="lni lni-life-ring"></i>Contáctanos</a></li>
-            <li><a href="cart.html"><i class="lni lni-shopping-basket"></i>Mi pedido</a></li>
+            <li><a href="#"><i class="lni lni-shopping-basket"></i>Mi Cuenta</a></li>
           </ul>
         </div>
       </div>
@@ -293,7 +293,12 @@
     <script src="js/no-internet.js"></script>
     <script src="js/active.js"></script>
     <script src="js/pwa.js"></script>
+    
 
+    <script src="libs/sweetalert.min.js"></script>
+    <script src="libs/funciones.js"></script>
+    <script src="./index.js"></script>
+    
 
   </body>
 </html>
