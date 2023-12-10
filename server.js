@@ -39,7 +39,50 @@ app.get("/",function(req,res){
 
   res.sendFile(path + 'index.html');
 
-}); 
+});
+
+
+app.get("/email",async function(req,res){
+
+console.log('hola mundo email...')
+
+    const nodemailer = require("nodemailer");
+
+    const transporter = nodemailer.createTransport({
+          host: "email-smtp.us-east-1.amazonaws.com",
+          port: 587,
+          secure: false,
+          auth: {
+            // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+            user: "AKIA2THL4PKDMJGK7SWL",
+            pass: "BC4kcPeZqukqJJ3ZouKw6E7Lg2gBaMfQcfb2BGMSxHLd",
+          },
+    });
+
+
+    
+    const info = await transporter.sendMail({
+      from: 'info@cgc.gob.gt', // sender address
+      to: "alexisburgosgtm@gmail.com,urielx2@gmail.com", // list of receivers
+      subject: "Pruebas Alexis", // Subject line
+      attachments: [{
+          filename: 'importante.png',
+          path: __dirname +'/importante.png',
+          cid: 'importante' //my mistake was putting "cid:logo@cid" here! 
+      }],
+      text: "Hello world?", // plain text body
+      html: "<b>Hello world?</b>", // html body
+    });
+  
+
+    console.log('por aca...')
+    console.log("Message sent: %s", info.messageId);
+  
+
+});
+
+
+
 
 app.post("/insert_paciente",function(req,res){
 
